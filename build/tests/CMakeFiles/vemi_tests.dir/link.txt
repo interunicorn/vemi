@@ -1,0 +1,1 @@
+/usr/bin/cc -fsanitize=address -Wl,--dependency-file=CMakeFiles/vemi_tests.dir/link.d CMakeFiles/vemi_tests.dir/test_vector.c.o -o vemi_tests  ../libvemi.a

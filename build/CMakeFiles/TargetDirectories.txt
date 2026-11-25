@@ -1,0 +1,6 @@
+/home/stafcal/Dev/C/vector/build/CMakeFiles/vemi.dir
+/home/stafcal/Dev/C/vector/build/CMakeFiles/edit_cache.dir
+/home/stafcal/Dev/C/vector/build/CMakeFiles/rebuild_cache.dir
+/home/stafcal/Dev/C/vector/build/tests/CMakeFiles/vemi_tests.dir
+/home/stafcal/Dev/C/vector/build/tests/CMakeFiles/edit_cache.dir
+/home/stafcal/Dev/C/vector/build/tests/CMakeFiles/rebuild_cache.dir

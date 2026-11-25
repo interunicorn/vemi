@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvemi.a CMakeFiles/vemi.dir/src/vemi.c.o
+/usr/bin/ranlib libvemi.a
