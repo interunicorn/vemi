@@ -1,14 +1,16 @@
+#include <stdlib.h>
+#include <string.h>
+
 #include "vemi.h"
 
-#include <stdlib.h>
-
-void vemi_vector_init(VemiVector *vec) {
+void vemi_vector_init(VemiVector *vec, int element_size) {
     vec->data = NULL;
     vec->size = 0;
     vec->capacity = 0;
+    vec->element_size = element_size;
 }
 
-void vemi_vector_push(VemiVector *vec, int value) {
+void vemi_vector_push(VemiVector *vec, const void *value) {
     if (vec->size == vec->capacity) {
         size_t new_capacity = vec->capacity == 0 ? 4 : vec->capacity * 2;
 
@@ -22,7 +24,12 @@ void vemi_vector_push(VemiVector *vec, int value) {
         vec->capacity = new_capacity;
     }
 
-    vec->data[vec->size++] = value;
+    void *destination =
+        (unsigned char *)vec->data + (vec->size * vec->element_size);
+
+    memcpy(destination, value, vec->element_size);
+
+    vec->size++;
 }
 
 void vemi_vector_pop(VemiVector *vec) {

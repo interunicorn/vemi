@@ -5,12 +5,13 @@
 int main(void) {
     VemiVector vec;
 
-    vemi_vector_init(&vec);
+    vemi_vector_init(&vec, sizeof(int));
 
-    vemi_vector_push(&vec, 42);
+    int number = 69;
+    vemi_vector_push(&vec, &number);
 
     assert(vec.size == 1);
-    assert(vec.data[0] == 42);
+    assert(((int *)vec.data)[0] == number);
 
     vemi_vector_free(&vec);
 
